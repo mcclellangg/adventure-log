@@ -45,6 +45,7 @@ const Log = () => {
 
     return (
         <>
+        <h1>Adventure Log</h1>
             <div className={styles.card}>
                 <h3>Stat Block</h3>
                 <StatDiv statTotal={40} statAbv={"HP"} />
