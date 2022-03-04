@@ -36,8 +36,8 @@ const Log = () => {
         return (
             <div className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
                 <div className={styles.btn_holder}>
-                    <button className={styles.stat_button} onClick={handlePlus}>+</button>
-                    <button className={styles.stat_button} onClick={handleMinus}>-</button>
+                    <button className={styles.stat_btn} onClick={handlePlus}>+</button>
+                    <button className={styles.stat_btn} onClick={handleMinus}>-</button>
                 </div>
             </div>
         )
@@ -51,15 +51,14 @@ const Log = () => {
                 <StatDiv statTotal={10} statAbv={"SS"} />
                 <StatDiv statTotal={5} statAbv={"SR"} />
             </div>
-            <div>
-                <label>Notes:
+            <div className={styles.notes_form}>
+                <h2>Notes:</h2>
                     <textarea className={styles.notes_area}
                         rows={20} cols={50}
                         value={notes.value}
                         onChange={handleChange}>
                     </textarea>
-                </label>
-                <button onClick={downloadTxtArea}>Download Notes</button>
+                <button className={styles.dwnld_btn} onClick={downloadTxtArea}>Download Notes</button>
             </div>
         </>
     );

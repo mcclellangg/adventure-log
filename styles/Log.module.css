@@ -4,31 +4,40 @@
     text-align: left;
     color: inherit;
     text-decoration: none;
-    border: 2px solid black;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 300px;
+    background-color: #40444B;
   }
-
-.stat_button {
-    color: #0070f3;
-    background-color: grey;
+/*  Stat Div     */
+.stat_btn {
+    padding: 2px 20px;
+    font-size: 1rem;
     margin: 2px;
+
 }
 
 .stat {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
+/*  Text Area    */
 .notes_area {
     resize: none;
-    border: 2px solid black;
     border-radius: 3px;
-    margin: 5%;
+    margin: 10px;
+    background-color: #40444B;
+    color: #E5F3FF;
 }
 
 .notes_form {
     display: flex;
     flex-direction: column;
+}
+
+.dwnld_btn {
+    padding: 2px 20px;
+    font-size: 1rem;
+    margin: 2px;
+    width: 120px;
 }
