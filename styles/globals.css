@@ -21,9 +21,37 @@ button {
   color: #40444B;
   background-color: #E5F3FF;
   border: 0;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 h1 {
   text-align: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: #E5F3FF;
+}
+
+input,
+select {
+    padding: 4px;
+    margin: 0.3rem 0 .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #40444B;
+    background-color: #E5F3FF;
+}
+
+span {
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+  border-radius: 3px;
+  margin: 10px;
+  background-color: #40444B;
+  color: #E5F3FF;
 }
