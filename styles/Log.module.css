@@ -9,12 +9,15 @@
     max-width: 300px;
     background-color: #40444B;
   }
+/* Character Info */
+.character_container {
+    display: flex;
+}
 /*  Stat Div     */
 .stat_btn {
     padding: 2px 20px;
     font-size: 1rem;
     margin: 2px;
-
 }
 
 .stat {

@@ -4,7 +4,14 @@ import CharacterForm from "../components/CharacterForm";
 import StatDiv from "../components/StatDiv";
 import styles from "../styles/Log.module.css";
 
+const CHARACTERS = require('../data/characters.json')
+
 const Log = () => {
+    // Functions and states for char select
+    const [characterList, setCharacterList] = useState(CHARACTERS);
+    const [selectedCharacter, setSelectedCharacter] = useState(characterList[0]);
+    const [addCharacter, setAddCharacter] = useState(false);
+
     // Functions and states for form
     const [notes, setNotes] = useState(
         { value: "Log your notes here champion!" }
@@ -21,7 +28,7 @@ const Log = () => {
           to notes state, to that element, creates a file for download
         */
         const element = document.createElement("a");
-        const file = new Blob([notes.value], {type: 'text/plain;charset=utf-8'});
+        const file = new Blob([notes.value], { type: 'text/plain;charset=utf-8' });
         element.href = URL.createObjectURL(file);
         element.download = "adventureLogNotes.txt";
         document.body.appendChild(element);
@@ -30,21 +37,44 @@ const Log = () => {
 
     return (
         <>
-        <CharacterForm/>
-        <h1>Adventure Log</h1>
             <div className={styles.card}>
-                <h3>Stat Block</h3>
-                <StatDiv statTotal={40} statAbv={"HP"} />
-                <StatDiv statTotal={10} statAbv={"SS"} />
-                <StatDiv statTotal={5} statAbv={"SR"} />
+                <h3>Character Select</h3>
+                <hr/>
+                <p>Sample Characters</p>
+                <div className={"container"}>
+                    <select onChange={(e) => setSelectedCharacter(characterList[e.target.value])}>
+                        {characterList.map((char, index) => {
+                            return <option value={index} key={index}>{char.characterName}--{char.class}</option>;
+                        })}
+                    </select>
+                    <button className={styles.stat_btn} onClick={() => setAddCharacter(!addCharacter)}>Create Character</button>
+                </div>
+            </div>
+
+            {addCharacter && <CharacterForm characterList={characterList} setCharacterList={setCharacterList}/>}
+            <h1>Adventure Log</h1>
+            <h2>Character Sheet</h2>
+            <div className={styles.character_container}>
+                <div className={styles.card}>
+                    <h3>Info</h3>
+                    <p>Name: {selectedCharacter.characterName}</p>
+                    <p>Class: {selectedCharacter.class}</p>
+                    <p>Level: {selectedCharacter.level}</p>
+                </div>
+                <div className={styles.card}>
+                    <h3>Stats</h3>
+                    <StatDiv statTotal={selectedCharacter.totalHP} statAbv={"HP"} />
+                    <StatDiv statTotal={selectedCharacter.totalSS} statAbv={"SS"} />
+                    <StatDiv statTotal={selectedCharacter.totalSR} statAbv={"SR"} />
+                </div>
             </div>
             <div className={styles.notes_form}>
                 <h2>Notes:</h2>
-                    <textarea className={styles.notes_area}
-                        rows={20} cols={50}
-                        value={notes.value}
-                        onChange={handleChange}>
-                    </textarea>
+                <textarea className={styles.notes_area}
+                    rows={20} cols={50}
+                    value={notes.value}
+                    onChange={handleChange}>
+                </textarea>
                 <button className={styles.dwnld_btn} onClick={downloadTxtArea}>Download Notes</button>
             </div>
         </>

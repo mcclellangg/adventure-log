@@ -1,0 +1,29 @@
+[
+    {
+        "characterName": "Bruenor",
+        "class": "Warrior",
+        "level": 1,
+        "totalHP": 12,
+        "totalSS": 0,
+        "totalSR": 3,
+        "description": "This is Bruenor, our first character!!"
+    },
+    {
+        "characterName": "Rogier",
+        "class": "Mage",
+        "level": 3,
+        "totalHP": 17,
+        "totalSS": 6,
+        "totalSR": 5,
+        "description": "This is Rogier, our fantastic mage!!"
+    },
+    {
+        "characterName": "Winnie",
+        "class": "Cleric",
+        "level": 6,
+        "totalHP": 42,
+        "totalSS": 8,
+        "totalSR": 6,
+        "description": "This is Winnie, I heal people, and they love me for it <3!"
+    }
+]

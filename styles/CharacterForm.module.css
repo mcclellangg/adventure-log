@@ -1,7 +1,7 @@
 .form_character {
     border: 1px solid hotpink;
     padding: 0 2rem;
-    margin: 2rem auto;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items:flex-start;

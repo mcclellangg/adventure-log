@@ -17,6 +17,11 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   color: #40444B;
   background-color: #E5F3FF;

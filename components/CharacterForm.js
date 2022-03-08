@@ -1,7 +1,7 @@
 import styles from '../styles/CharacterForm.module.css';
 import { useState } from "react";
 
-const CharacterForm = () => {
+const CharacterForm = ({characterList, setCharacterList}) => {
     const MAX_LEVEL = [...Array(20).keys()];
     const [form, setForm] = useState({
         characterName: "",
@@ -27,6 +27,7 @@ const CharacterForm = () => {
         e.preventDefault();
         alert('Character Info Submitted!')
         console.log(form);
+        setCharacterList([...characterList, form])
     };
 
     return (
