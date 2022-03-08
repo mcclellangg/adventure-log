@@ -1,5 +1,7 @@
 // Log Page
 import { useState } from "react";
+import CharacterForm from "../components/CharacterForm";
+import StatDiv from "../components/StatDiv";
 import styles from "../styles/Log.module.css";
 
 const Log = () => {
@@ -26,25 +28,9 @@ const Log = () => {
         element.click();
     }
 
-    // Stat component based on prop value
-    const StatDiv = ({ statTotal, statAbv }) => {
-        const [currentTotal, setCurrentTotal] = useState(statTotal);
-
-        const handlePlus = () => setCurrentTotal(currentTotal + 1);
-        const handleMinus = () => setCurrentTotal(currentTotal - 1);
-
-        return (
-            <div className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
-                <div className={styles.btn_holder}>
-                    <button className={styles.stat_btn} onClick={handlePlus}>+</button>
-                    <button className={styles.stat_btn} onClick={handleMinus}>-</button>
-                </div>
-            </div>
-        )
-    };
-
     return (
         <>
+        <CharacterForm/>
         <h1>Adventure Log</h1>
             <div className={styles.card}>
                 <h3>Stat Block</h3>

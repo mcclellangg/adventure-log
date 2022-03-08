@@ -23,7 +23,8 @@ const CharacterForm = () => {
         });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         alert('Character Info Submitted!')
         console.log(form);
     };
