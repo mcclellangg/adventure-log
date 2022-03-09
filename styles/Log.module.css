@@ -6,12 +6,15 @@
     text-decoration: none;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 300px;
+    width: 275px;
+    flex: 0 0 auto;
     background-color: #40444B;
   }
 /* Character Info */
 .character_container {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 /*  Stat Div     */
 .stat_btn {

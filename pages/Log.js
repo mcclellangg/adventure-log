@@ -12,6 +12,9 @@ const Log = () => {
     const [selectedCharacter, setSelectedCharacter] = useState(characterList[0]);
     const [addCharacter, setAddCharacter] = useState(false);
 
+    // States for Character Sheet
+    const [reset, setReset] = useState(false);
+
     // Functions and states for form
     const [notes, setNotes] = useState(
         { value: "Log your notes here champion!" }
@@ -63,9 +66,14 @@ const Log = () => {
                 </div>
                 <div className={styles.card}>
                     <h3>Stats</h3>
-                    <StatDiv statTotal={selectedCharacter.totalHP} statAbv={"HP"} />
-                    <StatDiv statTotal={selectedCharacter.totalSS} statAbv={"SS"} />
-                    <StatDiv statTotal={selectedCharacter.totalSR} statAbv={"SR"} />
+                    <StatDiv statTotal={selectedCharacter.totalHP} statAbv={"HP"} detail={"Health Points"} reset={reset} />
+                    <StatDiv statTotal={selectedCharacter.totalSS} statAbv={"SS"} detail={"Spell Slots"} />
+                    <StatDiv statTotal={selectedCharacter.totalSR} statAbv={"SR"} detail={"Short Rests"} />
+                    <button className={styles.stat_btn} onClick={()=> setReset(!reset)}>Reset HP</button>
+                </div>
+                <div className={styles.card}>
+                    <h3>Description</h3>
+                    <p>{selectedCharacter.description}</p>
                 </div>
             </div>
             <div className={styles.notes_form}>
