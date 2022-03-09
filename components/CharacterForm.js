@@ -32,6 +32,8 @@ const CharacterForm = ({characterList, setCharacterList}) => {
 
     return (
         <form className={styles.form_character} onSubmit={handleSubmit}>
+            <h3 className={styles.form_title}>Custom Character</h3>
+            <hr/>
             <span>
                 <label>Character Name</label>
                 <input
@@ -86,10 +88,11 @@ const CharacterForm = ({characterList, setCharacterList}) => {
             </span>
             <span>
                 <label>Description</label>
-                <textarea rows={15} cols={42}
+                <textarea rows={10} cols={40}
                 name="description"
                 value={form.description}
-                onChange={handleChange}></textarea>
+                onChange={handleChange}
+                className={styles.form_textarea}></textarea>
             </span>
             <button className={styles.submit_btn} type="submit">Submit</button>
         </form>

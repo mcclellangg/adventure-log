@@ -1,6 +1,7 @@
 .form_character {
-    border: 1px solid hotpink;
-    padding: 0 2rem;
+    background-color: #40444B;
+    border-radius: 4px;
+    padding: 1.5rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -12,4 +13,8 @@
     padding: 2px 20px;
     font-size: 1rem;
     margin: 2px;
+}
+
+.form_textarea {
+    background-color: #36393F;
 }
