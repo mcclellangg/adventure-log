@@ -1,6 +1,6 @@
 html,
 body {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -24,6 +24,17 @@ hr {
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 335px;
+}
+
+.small {
+  width: 200px;
 }
 
 button {
