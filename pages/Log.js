@@ -17,7 +17,7 @@ const Log = () => {
 
     // Functions and states for form
     const [notes, setNotes] = useState(
-        { value: "Log your notes here champion!" }
+        { value: "" }
     );
 
     const handleChange = (e) => {
@@ -80,6 +80,7 @@ const Log = () => {
                 <h2>Notes:</h2>
                 <textarea className={styles.notes_area}
                     rows={20} cols={50}
+                    placeholder="Log your notes here champion!"
                     value={notes.value}
                     onChange={handleChange}>
                 </textarea>

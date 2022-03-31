@@ -10,7 +10,7 @@ const CharacterForm = ({characterList, setCharacterList}) => {
         totalHP: "",
         totalSS: "",
         totalSR: "",
-        description: "Enter character description . . ."
+        description: ""
     });
 
     const handleChange = (e) => {
@@ -89,6 +89,7 @@ const CharacterForm = ({characterList, setCharacterList}) => {
             <span>
                 <label>Description</label>
                 <textarea rows={10} cols={40}
+                placeholder="Enter character description . . ."
                 name="description"
                 value={form.description}
                 onChange={handleChange}
