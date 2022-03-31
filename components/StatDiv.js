@@ -9,8 +9,8 @@ const StatDiv = ({ statTotal, statAbv, detail, reset }) => {
         setCurrentTotal(statTotal);
     }, [statTotal, reset]);
 
-    const handlePlus = () => setCurrentTotal(currentTotal + 1);
-    const handleMinus = () => setCurrentTotal(currentTotal - 1);
+    const handlePlus = () => setCurrentTotal(+currentTotal + 1);
+    const handleMinus = () => setCurrentTotal(+currentTotal - 1);
 
     return (
         <div title={detail} className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
