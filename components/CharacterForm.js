@@ -32,8 +32,8 @@ const CharacterForm = ({ characterList, setCharacterList, setAddCharacter }) => 
     };
 
     return (
-        <form className={styles.form_character} onSubmit={handleSubmit}>
-            <h3 className={styles.form_title}>Custom Character</h3>
+        <form className={styles.formCharacter} onSubmit={handleSubmit}>
+            <h3 className={styles.formTitle}>Custom Character</h3>
             <hr />
             <div className='grid'>
                 <span>
@@ -95,15 +95,15 @@ const CharacterForm = ({ characterList, setCharacterList, setAddCharacter }) => 
             <hr></hr>
             <span>
                 <label>Description</label>
-                <textarea rows={7} cols={40}
+                <textarea rows={7} cols={35}
                     placeholder="Enter character description . . ."
                     name="description"
                     value={form.description}
                     onChange={handleChange}
-                    className={styles.form_textarea}></textarea>
+                    className={styles.formTextarea}></textarea>
             </span>
                 <button className={styles.btn} type="submit">Submit</button>
-                <button className={styles.close_btn} type="button" onClick={() => setAddCharacter(false)}>X</button>
+                <button className={styles.closeBtn} type="button" onClick={() => setAddCharacter(false)}>X</button>
         </form>
     )
 };

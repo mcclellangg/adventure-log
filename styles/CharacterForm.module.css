@@ -1,4 +1,4 @@
-.form_character {
+.formCharacter {
     background-color: #40444B;
     border-radius: 4px;
     padding: 1.5rem;
@@ -6,12 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    max-width: 450px;
+    max-width: 350px;
     height: 550px;
 
 }
 
-.form_title {
+.formTitle {
     padding: 0px;
     margin: .5em;
 }
@@ -22,12 +22,12 @@
     margin: 2px;
 }
 
-.close_btn {
+.closeBtn {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-.form_textarea {
+.formTextarea {
     background-color: #36393F;
 }

@@ -11,13 +11,13 @@
     background-color: #40444B;
   }
 /* Character Info */
-.character_container {
+.characterContainer {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
 }
 /*  Stat Div     */
-.stat_btn {
+.statBtn {
     padding: 2px 20px;
     font-size: 1rem;
     margin: 2px;
@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 /*  Text Area    */
-.notes_area {
+.notesArea {
     resize: none;
     border-radius: 3px;
     margin: 10px;
@@ -36,12 +36,12 @@
     color: #E5F3FF;
 }
 
-.notes_form {
+.notesForm {
     display: flex;
     flex-direction: column;
 }
 
-.dwnld_btn {
+.dwnldBtn {
     padding: 2px 20px;
     font-size: 1rem;
     margin: 2px;

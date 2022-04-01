@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.popup_inner {
+.popupInner {
     position: absolute;
     top: 10px;
 }

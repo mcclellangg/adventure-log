@@ -14,9 +14,9 @@ const StatDiv = ({ statTotal, statAbv, detail, reset }) => {
 
     return (
         <div title={detail} className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
-            <div className={styles.btn_holder}>
-                <button className={styles.stat_btn} onClick={handlePlus}>+</button>
-                <button className={styles.stat_btn} onClick={handleMinus}>-</button>
+            <div>
+                <button className={styles.statBtn} onClick={handlePlus}>+</button>
+                <button className={styles.statBtn} onClick={handleMinus}>-</button>
             </div>
         </div>
     )

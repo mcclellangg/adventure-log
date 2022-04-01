@@ -30,7 +30,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 335px;
+  width: 300px;
 }
 
 .small {

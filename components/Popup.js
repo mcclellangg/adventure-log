@@ -3,7 +3,7 @@ import styles from '../styles/Popup.module.css';
 const Popup = (props) => {
     return (props.trigger) ? (
         <div className={styles.popup}>
-            <div className={styles.popup_inner}>
+            <div className={styles.popupInner}>
                 {props.children}
             </div>
 

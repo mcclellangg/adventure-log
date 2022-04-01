@@ -51,7 +51,7 @@ const Log = () => {
                             return <option value={index} key={index}>{char.characterName}--{char.class}</option>;
                         })}
                     </select>
-                    <button className={styles.stat_btn} onClick={() => setAddCharacter(!addCharacter)}>Create Character</button>
+                    <button className={styles.statBtn} onClick={() => setAddCharacter(!addCharacter)}>Create Character</button>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@ const Log = () => {
 
             <h1>Adventure Log</h1>
             <h2>Character Sheet</h2>
-            <div className={styles.character_container}>
+            <div className={styles.characterContainer}>
                 <div className={styles.card}>
                     <h3>Info</h3>
                     <p>Name: {selectedCharacter.characterName}</p>
@@ -77,22 +77,22 @@ const Log = () => {
                     <StatDiv statTotal={selectedCharacter.totalHP} statAbv={"HP"} detail={"Health Points"} reset={reset} />
                     <StatDiv statTotal={selectedCharacter.totalSS} statAbv={"SS"} detail={"Spell Slots"} />
                     <StatDiv statTotal={selectedCharacter.totalSR} statAbv={"SR"} detail={"Short Rests"} />
-                    <button className={styles.stat_btn} onClick={() => setReset(!reset)}>Reset HP</button>
+                    <button className={styles.statBtn} onClick={() => setReset(!reset)}>Reset HP</button>
                 </div>
                 <div className={styles.card}>
                     <h3>Description</h3>
                     <p>{selectedCharacter.description}</p>
                 </div>
             </div>
-            <div className={styles.notes_form}>
+            <div className={styles.notesForm}>
                 <h2>Notes:</h2>
-                <textarea className={styles.notes_area}
+                <textarea className={styles.notesArea}
                     rows={20} cols={50}
                     placeholder="Log your notes here champion!"
                     value={notes.value}
                     onChange={handleChange}>
                 </textarea>
-                <button className={styles.dwnld_btn} onClick={downloadTxtArea}>Download Notes</button>
+                <button className={styles.dwnldBtn} onClick={downloadTxtArea}>Download Notes</button>
             </div>
         </>
     );
