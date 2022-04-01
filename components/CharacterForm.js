@@ -1,7 +1,7 @@
 import styles from '../styles/CharacterForm.module.css';
 import { useState } from "react";
 
-const CharacterForm = ({characterList, setCharacterList}) => {
+const CharacterForm = ({ characterList, setCharacterList, setAddCharacter }) => {
     const MAX_LEVEL = [...Array(20).keys()];
     const [form, setForm] = useState({
         characterName: "",
@@ -10,7 +10,7 @@ const CharacterForm = ({characterList, setCharacterList}) => {
         totalHP: "",
         totalSS: "",
         totalSR: "",
-        description: "Enter character description . . ."
+        description: ""
     });
 
     const handleChange = (e) => {
@@ -19,7 +19,7 @@ const CharacterForm = ({characterList, setCharacterList}) => {
         const value = target.value;
         setForm({
             ...form,
-            [name] : value
+            [name]: value
         });
     };
 
@@ -28,20 +28,31 @@ const CharacterForm = ({characterList, setCharacterList}) => {
         alert('Character Info Submitted!')
         console.log(form);
         setCharacterList([...characterList, form])
+        setAddCharacter(false);
     };
 
     return (
-        <form className={styles.form_character} onSubmit={handleSubmit}>
-            <h3 className={styles.form_title}>Custom Character</h3>
-            <hr/>
-            <span>
-                <label>Character Name</label>
-                <input
-                type="text"
-                name="characterName"
-                onChange={handleChange}
-                value={form.characterName}/>
-            </span>
+        <form className={styles.formCharacter} onSubmit={handleSubmit}>
+            <h3 className={styles.formTitle}>Custom Character</h3>
+            <hr />
+            <div className='grid'>
+                <span>
+                    <label>Character Name</label>
+                    <input
+                        type="text"
+                        name="characterName"
+                        onChange={handleChange}
+                        value={form.characterName} />
+                </span>
+                <span>
+                    <label>Level</label>
+                    <select name="level" value={form.level} onChange={handleChange}>
+                        {MAX_LEVEL.map((level) => {
+                            return <option key={level}>{level + 1}</option>;
+                        })}
+                    </select>
+                </span>
+            </div>
             <span>
                 <label>Class</label>
                 <select name="class" value={form.class} onChange={handleChange}>
@@ -52,49 +63,47 @@ const CharacterForm = ({characterList, setCharacterList}) => {
                 </select>
             </span>
             <span>
-                <label>Level</label>
-                <select name="level" value={form.level} onChange={handleChange}>
-                    {MAX_LEVEL.map((level) => {
-                        return <option key={level}>{level + 1}</option>;
-                    })}
-                </select>
-            </span>
-            <span>
-                <label>Total HP</label>
+                <label>Max HP</label>
                 <input
-                type="text"
-                size="4"
-                name="totalHP"
-                value={form.totalHP}
-                onChange={handleChange}/>
+                    title="Enter your max HP value"
+                    type="text"
+                    size="4"
+                    name="totalHP"
+                    value={form.totalHP}
+                    onChange={handleChange} />
             </span>
-            <span>
-                <label>Total SS</label>
-                <input
-                type="text"
-                size="4"
-                name="totalSS"
-                value={form.totalSS}
-                onChange={handleChange}/>
-            </span>
-            <span>
-                <label>Total SR</label>
-                <input
-                type="text"
-                size="4"
-                name="totalSR"
-                value={form.totalSR}
-                onChange={handleChange}/>
-            </span>
+            <div className='grid small'>
+                <span>
+                    <label>Spell Slots</label>
+                    <input
+                        type="text"
+                        size="5"
+                        name="totalSS"
+                        value={form.totalSS}
+                        onChange={handleChange} />
+                </span>
+                <span>
+                    <label>Short Rests</label>
+                    <input
+                        type="text"
+                        size="6"
+                        name="totalSR"
+                        value={form.totalSR}
+                        onChange={handleChange} />
+                </span>
+            </div>
+            <hr></hr>
             <span>
                 <label>Description</label>
-                <textarea rows={10} cols={40}
-                name="description"
-                value={form.description}
-                onChange={handleChange}
-                className={styles.form_textarea}></textarea>
+                <textarea rows={7} cols={35}
+                    placeholder="Enter character description . . ."
+                    name="description"
+                    value={form.description}
+                    onChange={handleChange}
+                    className={styles.formTextarea}></textarea>
             </span>
-            <button className={styles.submit_btn} type="submit">Submit</button>
+                <button className={styles.btn} type="submit">Submit</button>
+                <button className={styles.closeBtn} type="button" onClick={() => setAddCharacter(false)}>X</button>
         </form>
     )
 };
