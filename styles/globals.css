@@ -75,3 +75,23 @@ textarea {
   background-color: #40444B;
   color: #E5F3FF;
 }
+
+.error {
+  color: #d62a55;
+}
+/* For hiding input type="file" */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
+input.visually-hidden:focus + label {
+  outline: thin dotted;
+}
+input.visually-hidden:focus-within + label {
+  outline: thin dotted;
+}

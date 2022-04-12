@@ -1,6 +1,7 @@
 // Trackers.js
 import DetailedTracker from "../components/DetailedTracker"
 import StatDiv from "../components/StatDiv";
+import ManageTrackers from "../components/ManageTrackers";
 import styles from "../styles/Trackers.module.css"
 import { useState } from "react";
 
@@ -53,10 +54,10 @@ const Trackers = () => {
         <>
             <div className={styles.mainContainer}>
                 <h1>Trackers</h1>
-                {trackers.filter(t => t.trackerType === "detail").map((detailTracker, index) => (
+                {trackers && trackers.filter(t => t.trackerType === "detail").map((detailTracker, index) => (
                     <DetailedTracker key={index.toString()} label={detailTracker.label} maxValue={detailTracker.maxValue} />
                 ))}
-                {trackers.filter(t => t.trackerType === "brief").map((briefTracker, index) => (
+                {trackers && trackers.filter(t => t.trackerType === "brief").map((briefTracker, index) => (
                     <StatDiv key={index.toString()} statAbv={briefTracker.label} statTotal={briefTracker.maxValue} />
                 ))}
                 <hr></hr>
@@ -104,7 +105,10 @@ const Trackers = () => {
                         <button className={styles.addBtn} type="submit">+</button>
                     </div>
                 </form>
+                <hr></hr>
+                <ManageTrackers trackers={trackers} setTrackers={setTrackers}></ManageTrackers>
             </div>
+
         </>
     )
 };
