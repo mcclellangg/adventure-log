@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "../styles/Trackers.module.css";
 
-const DetailedTracker = ({ label, maxValue }) => {
+const DetailedTracker = ({ label, maxValue, trackerId, removeTracker }) => {
     const [currentTotal, setCurrentTotal] = useState(maxValue);
     const [adjusterValue, setAdjusterValue] = useState("");
     const [clicked, setClicked] = useState(false);
@@ -13,6 +13,7 @@ const DetailedTracker = ({ label, maxValue }) => {
     return (
         <>
             <div className={styles.trackerContainer}>
+            <button value={trackerId} onClick={removeTracker}>Delete</button>
                 <div className={styles.trackerContent}>
                     <span className={styles.contentLabel}>{label}</span>
                     <div className={styles.contentGroup}>

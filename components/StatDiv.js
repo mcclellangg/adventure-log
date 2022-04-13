@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Log.module.css";
 
-const StatDiv = ({ statTotal, statAbv, detail, reset }) => {
+const StatDiv = ({ statTotal, statAbv, detail, reset, removeTracker, trackerId }) => {
     const [currentTotal, setCurrentTotal] = useState(statTotal);
 
     useEffect(() => {
@@ -13,12 +13,16 @@ const StatDiv = ({ statTotal, statAbv, detail, reset }) => {
     const handleMinus = () => setCurrentTotal(+currentTotal - 1);
 
     return (
-        <div title={detail} className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
-            <div>
-                <button className={styles.statBtn} onClick={handlePlus}>+</button>
-                <button className={styles.statBtn} onClick={handleMinus}>-</button>
+        <>
+            <button value={trackerId} onClick={removeTracker}>Delete</button>
+            <div title={detail} className={styles.stat}>{statAbv}: {currentTotal} / {statTotal}
+
+                <div>
+                    <button className={styles.statBtn} onClick={handlePlus}>+</button>
+                    <button className={styles.statBtn} onClick={handleMinus}>-</button>
+                </div>
             </div>
-        </div>
+        </>
     )
 };
 

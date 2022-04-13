@@ -9,28 +9,33 @@ const Trackers = () => {
     const [newTracker, setNewTracker] = useState({
         label: "",
         maxValue: "",
-        trackerType: ""
+        trackerType: "",
+        trackerId: ""
     });
     const [trackers, setTrackers] = useState([
         {
             label: "HP",
             maxValue: 35,
-            trackerType: "detail"
+            trackerType: "detail",
+            trackerId: 0
         },
         {
             label: "Mana",
             maxValue: 15,
-            trackerType: "detail"
+            trackerType: "detail",
+            trackerId: 1
         },
         {
             label: "Spell Slots",
             maxValue: 8,
-            trackerType: "brief"
+            trackerType: "brief",
+            trackerId: 2
         },
         {
             label: "Channel Divinity",
             maxValue: 15,
-            trackerType: "brief"
+            trackerType: "brief",
+            trackerId: 3
         }
     ]);
     const updateNewTracker = (e) => {
@@ -45,20 +50,33 @@ const Trackers = () => {
 
     const addTracker = (e) => {
         e.preventDefault();
+        newTracker.trackerId = trackers.length;
         console.log("Tracker added!", newTracker);
         setTrackers([...trackers, newTracker]);
-        setNewTracker({ label: "", maxValue: "", trackerType: "" })
+        setNewTracker({ label: "", maxValue: "", trackerType: "", trackerId: "" })
     };
+
+    const removeTracker = (e) => {
+        e.preventDefault();
+        const removeId = e.target.value;
+        setTrackers([...trackers.filter((t) => t.trackerId != removeId)]);
+    }
 
     return (
         <>
             <div className={styles.mainContainer}>
-                <h1>Trackers</h1>
-                {trackers && trackers.filter(t => t.trackerType === "detail").map((detailTracker, index) => (
-                    <DetailedTracker key={index.toString()} label={detailTracker.label} maxValue={detailTracker.maxValue} />
+                {/* <h1>Trackers</h1> */}
+                {trackers && trackers.filter(t => t.trackerType === "detail").map((detailTracker) => (
+                    <DetailedTracker key={detailTracker.trackerId}
+                        label={detailTracker.label}
+                        maxValue={detailTracker.maxValue}
+                        removeTracker={removeTracker} trackerId={detailTracker.trackerId} />
                 ))}
-                {trackers && trackers.filter(t => t.trackerType === "brief").map((briefTracker, index) => (
-                    <StatDiv key={index.toString()} statAbv={briefTracker.label} statTotal={briefTracker.maxValue} />
+                {trackers && trackers.filter(t => t.trackerType === "brief").map((briefTracker) => (
+                    <StatDiv key={briefTracker.trackerId}
+                        statAbv={briefTracker.label}
+                        statTotal={briefTracker.maxValue}
+                        removeTracker={removeTracker} trackerId={briefTracker.trackerId} />
                 ))}
                 <hr></hr>
                 <span className={styles.formText}>Add Trackers :</span>
