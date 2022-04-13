@@ -120,7 +120,7 @@ const Trackers = () => {
                         </div>
                     </div>
                     <div className={styles.container}>
-                        <button className={styles.addBtn} type="submit">+</button>
+                        <button className={styles.crudBtn} type="submit">&#43;</button>
                     </div>
                 </form>
                 <hr></hr>
