@@ -1,7 +1,7 @@
 // Log Page
 import { useState } from "react";
 import CharacterForm from "../components/CharacterForm";
-import StatDiv from "../components/StatDiv";
+import BriefTracker from "../components/BriefTracker";
 import Popup from "../components/Popup";
 import styles from "../styles/Log.module.css";
 
@@ -74,9 +74,9 @@ const Log = () => {
                 </div>
                 <div className={styles.card}>
                     <h3>Stats</h3>
-                    <StatDiv statTotal={selectedCharacter.totalHP} statAbv={"HP"} detail={"Health Points"} reset={reset} />
-                    <StatDiv statTotal={selectedCharacter.totalSS} statAbv={"SS"} detail={"Spell Slots"} />
-                    <StatDiv statTotal={selectedCharacter.totalSR} statAbv={"SR"} detail={"Short Rests"} />
+                    <BriefTracker statTotal={selectedCharacter.totalHP} statAbv={"HP"} detail={"Health Points"} reset={reset} />
+                    <BriefTracker statTotal={selectedCharacter.totalSS} statAbv={"SS"} detail={"Spell Slots"} />
+                    <BriefTracker statTotal={selectedCharacter.totalSR} statAbv={"SR"} detail={"Short Rests"} />
                     <button className={styles.statBtn} onClick={() => setReset(!reset)}>Reset HP</button>
                 </div>
                 <div className={styles.card}>

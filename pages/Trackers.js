@@ -1,6 +1,6 @@
 // Trackers.js
 import DetailedTracker from "../components/DetailedTracker"
-import StatDiv from "../components/StatDiv";
+import BriefTracker from "../components/BriefTracker";
 import ManageTrackers from "../components/ManageTrackers";
 import styles from "../styles/Trackers.module.css"
 import { useState } from "react";
@@ -73,7 +73,7 @@ const Trackers = () => {
                         removeTracker={removeTracker} trackerId={detailTracker.trackerId} />
                 ))}
                 {trackers && trackers.filter(t => t.trackerType === "brief").map((briefTracker) => (
-                    <StatDiv key={briefTracker.trackerId}
+                    <BriefTracker key={briefTracker.trackerId}
                         statAbv={briefTracker.label}
                         statTotal={briefTracker.maxValue}
                         removeTracker={removeTracker} trackerId={briefTracker.trackerId} />

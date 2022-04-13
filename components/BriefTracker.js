@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Log.module.css";
 
-const StatDiv = ({ statTotal, statAbv, detail, reset, removeTracker, trackerId }) => {
+const BriefTracker = ({ statTotal, statAbv, detail, reset, removeTracker, trackerId }) => {
     const [currentTotal, setCurrentTotal] = useState(statTotal);
 
     useEffect(() => {
@@ -26,4 +26,4 @@ const StatDiv = ({ statTotal, statAbv, detail, reset, removeTracker, trackerId }
     )
 };
 
-export default StatDiv;
+export default BriefTracker;
