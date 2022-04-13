@@ -9,7 +9,7 @@ const Trackers = () => {
     const [newTracker, setNewTracker] = useState({
         label: "",
         maxValue: "",
-        trackerType: "",
+        trackerType: "brief",
         trackerId: ""
     });
     const [trackers, setTrackers] = useState([
@@ -53,7 +53,7 @@ const Trackers = () => {
         newTracker.trackerId = trackers.length;
         console.log("Tracker added!", newTracker);
         setTrackers([...trackers, newTracker]);
-        setNewTracker({ label: "", maxValue: "", trackerType: "", trackerId: "" })
+        setNewTracker({ label: "", maxValue: "", trackerType: "brief", trackerId: "" })
     };
 
     const removeTracker = (e) => {
@@ -113,7 +113,7 @@ const Trackers = () => {
                                     id="brief"
                                     name="trackerType"
                                     value="brief"
-                                    defaultChecked
+                                    checked={newTracker.trackerType === "brief"}
                                     onChange={updateNewTracker} />
                                 <label htmlFor="brief">Brief</label>
                             </div>
