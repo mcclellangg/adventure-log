@@ -38,6 +38,25 @@ const Trackers = () => {
             trackerId: 3
         }
     ]);
+    const [notes, setNotes] = useState(
+        { value: "" }
+    );
+    const handleChange = (e) => {
+        setNotes({ value: e.target.value });
+    }
+    const downloadTxtArea = () => {
+        /*
+          Temporarily creates an anchor element, and attaches the text area
+          to notes state, to that element, creates a file for download
+        */
+        const element = document.createElement("a");
+        const file = new Blob([notes.value], { type: 'text/plain;charset=utf-8' });
+        element.href = URL.createObjectURL(file);
+        element.download = "adventureLogNotes.txt";
+        document.body.appendChild(element);
+        element.click();
+    }
+
     const updateNewTracker = (e) => {
         const target = e.target;
         const name = target.name;
@@ -126,6 +145,17 @@ const Trackers = () => {
                 </form>
                 <hr></hr>
                 <ManageTrackers trackers={trackers} setTrackers={setTrackers}></ManageTrackers>
+            </div>
+
+            <div className={styles.notesForm}>
+                <h2>Notes:</h2>
+                <textarea className={styles.notesArea}
+                    rows={20} cols={50}
+                    placeholder="Log your notes here champion!"
+                    value={notes.value}
+                    onChange={handleChange}>
+                </textarea>
+                <button className={styles.dwnldBtn} onClick={downloadTxtArea}>Download Notes</button>
             </div>
 
         </>

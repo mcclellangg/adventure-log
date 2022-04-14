@@ -157,6 +157,27 @@
     color: #000;
     border-radius: 4px;
 }
+/*  Text Area    */
+.notesArea {
+    resize: none;
+    border-radius: 3px;
+    margin: 10px;
+    background-color: #40444B;
+    color: #E5F3FF;
+}
+
+.notesForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.dwnldBtn {
+    padding: 2px 20px;
+    font-size: 1rem;
+    margin: 2px;
+    width: 120px;
+}
+
 /* General Classes */
 .successGreen {
     background-color: #4BB543;

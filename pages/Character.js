@@ -63,7 +63,6 @@ const Log = () => {
                 </CharacterForm>
             </Popup>
 
-            <h1>Adventure Log</h1>
             <h2>Character Sheet</h2>
             <div className={styles.characterContainer}>
                 <div className={styles.card}>
@@ -83,16 +82,6 @@ const Log = () => {
                     <h3>Description</h3>
                     <p>{selectedCharacter.description}</p>
                 </div>
-            </div>
-            <div className={styles.notesForm}>
-                <h2>Notes:</h2>
-                <textarea className={styles.notesArea}
-                    rows={20} cols={50}
-                    placeholder="Log your notes here champion!"
-                    value={notes.value}
-                    onChange={handleChange}>
-                </textarea>
-                <button className={styles.dwnldBtn} onClick={downloadTxtArea}>Download Notes</button>
             </div>
         </>
     );
