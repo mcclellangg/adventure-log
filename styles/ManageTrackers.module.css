@@ -1,0 +1,8 @@
+.gridContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    padding: 8px 6px;
+}

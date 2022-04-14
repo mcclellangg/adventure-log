@@ -1,7 +1,7 @@
 html,
 body {
-  padding: 10px;
-  margin: 0;
+  padding: 4px;
+  margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #36393F;
@@ -74,4 +74,24 @@ textarea {
   margin: 10px;
   background-color: #40444B;
   color: #E5F3FF;
+}
+
+.error {
+  color: #d62a55;
+}
+/* For hiding input type="file" */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
+input.visually-hidden:focus + label {
+  outline: thin dotted;
+}
+input.visually-hidden:focus-within + label {
+  outline: thin dotted;
 }

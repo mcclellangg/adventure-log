@@ -1,0 +1,222 @@
+.mainContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    border-radius: 10px;
+    width: 500px;
+    flex: 0 0 auto;
+    background-color: #40444B;
+}
+
+.outerContainer {
+    display: flex;
+    align-items: center;
+}
+
+.trackerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 95%;
+    margin-left: 10px;
+}
+
+/* Tracker Content */
+.trackerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contentLabel {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contentGroup {
+    display: flex;
+    column-gap: 5px;
+}
+
+.contentInput {
+    width: 60px;
+    padding: 2px;
+    margin: 0px;
+    font-size: 20px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.contentInputText {
+    font-size: 22px;
+    width: 60px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 4px;
+}
+
+.contentSep {
+    font-size: 22px;
+    padding: 4px;
+    margin-left: -4px;
+    text-align: center;
+}
+.contentText {
+    font-size: 22px;
+    padding: 4px;
+    text-align: center;
+    line-height: 1.5;
+    margin-left: 8px;
+}
+/* Detailed Tracker Adjuster */
+.trackerAdjuster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trackerAdjuster > * {
+    margin: 2px;
+}
+
+.adjusterBtn {
+    width: 65px;
+    height: 22px;
+    border-radius: 8px;
+    color: white;
+}
+
+.newTrackerContainer {
+    display: flex;
+    column-gap: 12px;
+    justify-content: space-evenly;
+}
+
+.trackerInput {
+    margin-top: 16px;
+}
+
+.container {
+    margin-left: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.crudBtn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #4BB543;
+    color: white;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Brief Tracker */
+.briefBtn {
+    padding: 2px 20px;
+    font-size: 1rem;
+    margin: 2px;
+    color: white;
+}
+/* Radio Buttons */
+.wrapper {
+    display: flex;
+}
+
+.smallLabel {
+    font-size: 12px;
+    padding: 0;
+    margin: 0px;
+}
+
+.customInput {
+    flex-grow: 1;
+}
+
+.customInput input[type=radio] {
+    display: none;
+}
+
+.customInput label {
+    display: block;
+    padding: 3px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    transition : all .4s 0s ease;
+}
+
+.customInput input[type=radio]:checked + label {
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: 4px;
+}
+/*  Text Area    */
+.notesArea {
+    resize: none;
+    border-radius: 3px;
+    margin: 10px;
+    background-color: #40444B;
+    color: #E5F3FF;
+}
+
+.notesForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.dwnldBtn {
+    padding: 2px 20px;
+    font-size: 1rem;
+    margin: 2px;
+    width: 120px;
+}
+
+/* General Classes */
+.successGreen {
+    background-color: #4BB543;
+}
+
+.errorRed {
+    background-color: #c53131;
+}
+
+.primary {
+    background-color: #ee0261;
+}
+
+.complement {
+    background-color: #6002EE;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.formText {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 2px;
+    color: #4BB543;
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    margin-left: 10px;
+}
+
+#containsHidden .crudBtn {
+    visibility: hidden;
+  }
+
+  #containsHidden:hover .crudBtn {
+    visibility: visible;
+  }
