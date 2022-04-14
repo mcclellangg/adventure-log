@@ -105,6 +105,7 @@ const Trackers = () => {
                                     id="detail"
                                     name="trackerType"
                                     value="detail"
+                                    checked={newTracker.trackerType === "detail"}
                                     onChange={updateNewTracker} />
                                 <label htmlFor="detail">Detail</label>
                             </div>
