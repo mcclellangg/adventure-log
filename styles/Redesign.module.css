@@ -1,0 +1,35 @@
+/* Import Colors */
+@value colors: "./colors.css";
+
+@value main-bg-color from colors;
+@value off-white from colors;
+@value light-grey from colors;
+@value dark-grey from colors;
+@value primary-brown from colors;
+@value light-brown from colors;
+@value lightest-brown from colors;
+@value hot-pink from colors;
+
+/* Utility */
+.header {
+    color: off-white;
+    font-size: 4rem;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.primaryText {
+    color: lightest-brown;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.flexWrapper {
+    display: flex;
+}
+
+/* Layout Container */
+.layoutContainer {
+    display: flex;
+    border: 1px solid hotpink;
+}

@@ -1,0 +1,73 @@
+/* Import colors */
+@value colors: "../.././styles/colors.css";
+
+@value main-bg-color from colors;
+@value off-white from colors;
+@value light-grey from colors;
+@value dark-grey from colors;
+@value primary-brown from colors;
+@value light-brown from colors;
+@value lightest-brown from colors;
+@value hot-pink from colors;
+
+/* Utility */
+.primaryText {
+    color: lightest-brown;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Tracker Form */
+.trackerForm {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid light-brown;
+    border-radius: 8px;
+}
+
+.trackerForm > * {
+    padding: 4px;
+    margin: 8px;
+}
+
+.trackerForm label {
+    color: off-white;
+}
+
+.trackerForm input {
+    background-color: dark-grey;
+    color: off-white;
+    height: 40px;
+    width: 300px;
+}
+
+.trackerForm button {
+    background-color: lightest-brown;
+    color: off-white;
+    margin: 20px auto 20px;
+    padding: 16px 40px;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+/* Radio Buttons */
+.radioWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.customInput input[type=radio] {
+    display: none;
+}
+
+.customInput label {
+    background-color: dark-grey;
+    border: 1px solid off-white;
+    border-radius: 4px;
+    padding: 16px 40px;
+    color: off-white;
+    text-align: center;
+    transition : all .4s 0s ease;
+}
