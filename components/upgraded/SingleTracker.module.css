@@ -1,0 +1,47 @@
+/* Import colors */
+@value colors: "../.././styles/colors.css";
+
+@value main-bg-color from colors;
+@value off-white from colors;
+@value light-grey from colors;
+@value dark-grey from colors;
+@value primary-brown from colors;
+@value light-brown from colors;
+@value lightest-brown from colors;
+@value hot-pink from colors;
+
+/* Single Tracker */
+.singleTracker {
+    border: 1px solid off-white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.singleTracker label {
+    color: lightest-brown;
+    font-weight: 500;
+    font-size: 18px;
+    flex: 2 1 0;
+    margin-left: 10%;
+}
+
+.singleTracker .valueWrapper {
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    font-weight: 500;
+    flex: 1 1 0;
+    margin-right: 10%;
+}
+
+.singleTracker button {
+    background-color: main-bg-color;
+    color: off-white;
+    font-size: 2rem;
+    height: 70px;
+    width: 70px;
+    border-radius: 0;
+    border: 1px solid off-white;
+}
