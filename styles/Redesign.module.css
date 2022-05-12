@@ -28,8 +28,60 @@
     display: flex;
 }
 
+.trackerContainer hr {
+    border-top: 1px solid;
+    border-color: primary-brown;
+}
+
 /* Layout Container */
 .layoutContainer {
     display: flex;
-    border: 1px solid hotpink;
+    /* border: 1px solid hotpink; */
+    justify-content: space-around;
+}
+
+/* Tracker Container */
+.trackerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    width: 600px;
+}
+
+/* Single Tracker */
+.singleTracker {
+    border: 1px solid off-white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.singleTracker label {
+    color: lightest-brown;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 12px;
+    flex: 2 1 0;
+}
+
+.singleTracker .valueWrapper {
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    font-weight: 500;
+    margin-right: 30px;
+    flex: 1 1 0;
+}
+
+.singleTracker button {
+    height: 70px;
+    width: 70px;
+    background-color: main-bg-color;
+    color: off-white;
+    font-size: 2rem;
+    border-radius: 0;
+    border: 1px solid off-white;
 }

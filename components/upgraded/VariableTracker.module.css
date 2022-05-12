@@ -1,0 +1,64 @@
+/* Import colors */
+@value colors: "../.././styles/colors.css";
+
+@value main-bg-color from colors;
+@value off-white from colors;
+@value light-grey from colors;
+@value dark-grey from colors;
+@value primary-brown from colors;
+@value light-brown from colors;
+@value lightest-brown from colors;
+@value hot-pink from colors;
+
+/* Utility */
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Variable Tracker */
+.variableTracker {
+    display: flex;
+    border: 1px solid off-white;
+    border-radius: 2px;
+}
+
+.contentWrapper {
+    flex: 3 1 0;
+}
+
+.contentWrapper label {
+    color: lightest-brown;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.valueWrapper {
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+    margin: 0px 80px 20px 40px;
+}
+
+.variableAdj {
+    font-size: 4rem;
+    color: primary-brown;
+    font-weight: 600;
+    border: 1px solid off-white;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.variableTracker button {
+    background-color: main-bg-color;
+    color: off-white;
+    font-size: 2rem;
+    height: 70px;
+    width: 70px;
+    border-radius: 0;
+    border: 1px solid off-white;
+}
