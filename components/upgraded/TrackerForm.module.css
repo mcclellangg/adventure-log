@@ -23,6 +23,7 @@
     flex-direction: column;
     border: 2px solid light-brown;
     border-radius: 8px;
+    max-height: 500px;
 }
 
 .trackerForm > * {
@@ -37,7 +38,7 @@
 .trackerForm input {
     background-color: dark-grey;
     color: off-white;
-    height: 40px;
+    min-height: 40px;
     width: 300px;
 }
 

@@ -7,7 +7,7 @@ const SingleTracker = () => {
             <div className={styles.singleTracker}>
                 <label>DEXTERITY</label>
                 <div className={styles.valueWrapper}>
-                    <div>1</div>
+                    <div>01</div>
                     <div>/</div>
                     <div>20</div>
                 </div>

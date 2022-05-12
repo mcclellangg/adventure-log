@@ -8,9 +8,9 @@ const VariableTracker = () => {
                 <div className={styles.contentWrapper}>
                     <label>SPELL SLOTS</label>
                     <div className={styles.valueWrapper}>
-                        <div>1</div>
+                        <div>01</div>
                         <div>/</div>
-                        <div>5</div>
+                        <div>05</div>
                     </div>
                 </div>
                 <label className={styles.variableAdj}>09</label>

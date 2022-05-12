@@ -19,6 +19,11 @@ const Log = () => {
                     <SingleTracker></SingleTracker>
                     <SingleTracker></SingleTracker>
                 </div>
+
+                <div className={styles.notesContainer}>
+                    <label>NOTES</label>
+                    <textarea rows={40} cols={60}></textarea>
+                </div>
             </div>
         </>
     )
