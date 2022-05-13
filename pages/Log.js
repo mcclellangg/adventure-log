@@ -22,8 +22,14 @@ const Log = () => {
 
                     <hr></hr>
 
-                    <SingleTracker></SingleTracker>
-                    <SingleTracker></SingleTracker>
+                    <SingleTracker
+                        label={"CHANNEL DIVINITY"}
+                        maxValue={"2"}>
+                    </SingleTracker>
+                    <SingleTracker
+                        label={"LAY ON HANDS"}
+                        maxValue={"15"}>
+                    </SingleTracker>
                 </div>
 
                 <div className={styles.notesContainer}>

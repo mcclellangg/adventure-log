@@ -1,18 +1,24 @@
 // Single Tracker
+import { useState } from "react";
 import styles from "./SingleTracker.module.css";
 
-const SingleTracker = () => {
+const SingleTracker = ({ label, maxValue}) => {
+    const [currentTotal, setCurrentTotal] = useState(maxValue);
+
+    const incCurrent = () => setCurrentTotal(+currentTotal + 1);
+    const decCurrent = () => setCurrentTotal(+currentTotal - 1);
+
     return (
         <>
             <div className={styles.singleTracker}>
-                <label>DEXTERITY</label>
+                <label>{label}</label>
                 <div className={styles.valueWrapper}>
-                    <div>01</div>
+                    <div>{currentTotal}</div>
                     <div>/</div>
-                    <div>20</div>
+                    <div>{maxValue}</div>
                 </div>
-                <button>&#8722;</button>
-                <button>&#65291;</button>
+                <button onClick={decCurrent}>&#8722;</button>
+                <button onClick={incCurrent}>&#65291;</button>
             </div>
         </>
     );
