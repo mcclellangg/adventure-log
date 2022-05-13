@@ -20,6 +20,7 @@
 /* Tracker Form */
 .trackerForm {
     display: flex;
+    padding: 12px;
     flex-direction: column;
     border: 2px solid light-brown;
     border-radius: 8px;
@@ -37,8 +38,9 @@
 
 .trackerForm input {
     background-color: dark-grey;
+    font-size: 18px;
     color: off-white;
-    min-height: 40px;
+    min-height: 50px;
     width: 300px;
 }
 
@@ -71,4 +73,9 @@
     color: off-white;
     text-align: center;
     transition : all .4s 0s ease;
+}
+
+.customInput input[type=radio]:checked + label {
+    border: 1px solid lightest-brown;
+    color: lightest-brown;
 }
