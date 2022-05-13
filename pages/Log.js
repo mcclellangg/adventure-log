@@ -11,8 +11,14 @@ const Log = () => {
             <div className={styles.layoutContainer}>
                 <TrackerForm></TrackerForm>
                 <div className={styles.trackerContainer}>
-                    <VariableTracker></VariableTracker>
-                    <VariableTracker></VariableTracker>
+                    <VariableTracker
+                        label={"HEALTH POINTS"}
+                        maxValue={"35"}>
+                    </VariableTracker>
+                    <VariableTracker
+                        label={"MANA"}
+                        maxValue={"48"}>
+                    </VariableTracker>
 
                     <hr></hr>
 
