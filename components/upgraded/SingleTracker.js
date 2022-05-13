@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./SingleTracker.module.css";
 
-const SingleTracker = ({ label, maxValue}) => {
+const SingleTracker = ({ label, maxValue, trackerId, deleteTracker }) => {
     const [currentTotal, setCurrentTotal] = useState(maxValue);
 
     const incCurrent = () => setCurrentTotal(+currentTotal + 1);
@@ -10,7 +10,13 @@ const SingleTracker = ({ label, maxValue}) => {
 
     return (
         <>
-            <div className={styles.singleTracker}>
+            <div className={styles.singleTracker} id={styles.singleTracker}>
+                <button
+                    className={styles.close}
+                    value={trackerId}
+                    onClick={deleteTracker}>
+                    &#88;
+                </button>
                 <label>{label}</label>
                 <div className={styles.valueWrapper}>
                     <div>{currentTotal}</div>

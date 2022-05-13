@@ -2,11 +2,12 @@
 import { useState } from "react";
 import styles from "./TrackerForm.module.css";
 
-const TrackerForm = () => {
+const TrackerForm = ( {setTrackers, trackers }) => {
     const [trackerForm, setTrackerForm] = useState({
         label: "",
         maxValue: "",
-        trackerType: "single"
+        trackerType: "single",
+        id: ""
     });
 
     const updateForm = (e) => {
@@ -22,9 +23,14 @@ const TrackerForm = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        alert("Form Submitted!");
+        trackerForm.id = trackers.length;
+        setTrackers([
+            ...trackers,
+            trackerForm
+        ]);
         console.log(trackerForm);
-    }
+    };
+
     return (
         <>
             <form className={styles.trackerForm} onSubmit={submitForm}>

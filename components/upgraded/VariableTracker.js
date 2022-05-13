@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./VariableTracker.module.css";
 
-const VariableTracker = ({ label, maxValue }) => {
+const VariableTracker = ({ label, maxValue, trackerId, deleteTracker }) => {
     const [currentTotal, setCurrentTotal] = useState(maxValue);
     const [adjuster, setAdjuster] = useState("00");
     const [clicked, setClicked] = useState(false);
@@ -12,10 +12,17 @@ const VariableTracker = ({ label, maxValue }) => {
 
     return (
         <>
-            <div className={styles.variableTracker}>
+            <div className={styles.variableTracker} id={styles.variableTracker}>
                 <div className={styles.contentWrapper}>
+
                     <label>{label}</label>
                     <div className={styles.valueWrapper}>
+                        <button
+                            className={styles.close}
+                            value={trackerId}
+                            onClick={deleteTracker}>
+                            &#88;
+                        </button>
                         {clicked ?
                             (
                                 <input

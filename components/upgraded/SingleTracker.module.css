@@ -45,3 +45,27 @@
     border-radius: 0;
     border: 1px solid off-white;
 }
+
+/* Hidden and pseudo classes */
+.singleTracker button.close {
+    margin-left: 8px;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border-color: lightest-brown;
+    background-color: rgba(20, 20, 20, 0.2);
+    color: lightest-brown;
+}
+
+#singleTracker button.close {
+    visibility: hidden;
+}
+
+#singleTracker:hover button.close {
+    visibility: visible;
+}
+
+.singleTracker:hover {
+    border-color: lightest-brown;
+}

@@ -1,35 +1,50 @@
 // Updated Redesign of Log
+import { useState } from "react";
+
+import testData from "../design/trackers";
+
 import styles from "../styles/Redesign.module.css"
 import TrackerForm from "../components/upgraded/TrackerForm";
 import VariableTracker from "../components/upgraded/VariableTracker";
 import SingleTracker from "../components/upgraded/SingleTracker";
 
 const Log = () => {
+    const [trackers, setTrackers] = useState(testData);
+
+    const deleteTracker = (e) => {
+        e.preventDefault();
+        const removeById = e.target.value;
+        setTrackers([...trackers.filter((t) => t.id != removeById)]);
+    };
+
     return (
         <>
             <h1 className={styles.header}>THE ADVENTURE LOG</h1>
             <div className={styles.layoutContainer}>
-                <TrackerForm></TrackerForm>
+                <TrackerForm
+                    setTrackers={setTrackers}
+                    trackers={trackers}>
+                </TrackerForm>
                 <div className={styles.trackerContainer}>
-                    <VariableTracker
-                        label={"HEALTH POINTS"}
-                        maxValue={"35"}>
-                    </VariableTracker>
-                    <VariableTracker
-                        label={"MANA"}
-                        maxValue={"48"}>
-                    </VariableTracker>
-
+                    {trackers && trackers.filter(t => t.trackerType === "variable").map((variableTracker) =>
+                        <VariableTracker
+                            key={variableTracker.id}
+                            label={variableTracker.label}
+                            maxValue={variableTracker.maxValue}
+                            trackerId={variableTracker.id}
+                            deleteTracker={deleteTracker}>
+                        </VariableTracker>
+                    )}
                     <hr></hr>
-
-                    <SingleTracker
-                        label={"CHANNEL DIVINITY"}
-                        maxValue={"2"}>
-                    </SingleTracker>
-                    <SingleTracker
-                        label={"LAY ON HANDS"}
-                        maxValue={"15"}>
-                    </SingleTracker>
+                    {trackers && trackers.filter(t => t.trackerType === "single").map((singleTracker) =>
+                        <SingleTracker
+                            key={singleTracker.id}
+                            label={singleTracker.label}
+                            maxValue={singleTracker.maxValue}
+                            trackerId={singleTracker.id}
+                            deleteTracker={deleteTracker}>
+                        </SingleTracker>
+                    )}
                 </div>
 
                 <div className={styles.notesContainer}>

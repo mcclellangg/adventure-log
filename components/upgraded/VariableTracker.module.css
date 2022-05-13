@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-around;
     font-size: 4rem;
-    margin: 0px 80px 20px 40px;
+    margin: 0px 30px 20px 5px;
 }
 
 .valueWrapper input {
@@ -72,4 +72,27 @@
     width: 70px;
     border-radius: 0;
     border: 1px solid off-white;
+}
+
+/* Hidden and pseudo classes */
+.variableTracker button.close {
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: lightest-brown;
+    background-color: rgba(20, 20, 20, 0.2);
+    color: lightest-brown;
+}
+
+#variableTracker button.close {
+    visibility: hidden;
+}
+
+#variableTracker:hover button.close {
+    visibility: visible;
+}
+
+.variableTracker:hover {
+    border-color: lightest-brown;
 }
