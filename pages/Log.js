@@ -1,7 +1,7 @@
 // Updated Redesign of Log
 import { useState } from "react";
 
-import testData from "../design/trackers";
+import testData from "../data/trackers";
 
 import styles from "../styles/Redesign.module.css"
 import TrackerForm from "../components/upgraded/TrackerForm";
