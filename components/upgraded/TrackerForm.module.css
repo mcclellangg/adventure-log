@@ -22,14 +22,13 @@
     display: flex;
     padding: 12px;
     flex-direction: column;
-    border: 2px solid light-brown;
-    border-radius: 8px;
-    max-height: 500px;
+    border: 1px solid light-brown;
+    border-radius: 2px;
+    max-height: 520px;
 }
 
 .trackerForm > * {
     padding: 4px;
-    margin: 8px;
 }
 
 .trackerForm label {
@@ -38,10 +37,12 @@
 
 .trackerForm input {
     background-color: dark-grey;
+    border: 1px solid off-white;
     font-size: 18px;
     color: off-white;
     min-height: 50px;
     width: 300px;
+    margin-bottom: 5%;
 }
 
 .trackerForm button {

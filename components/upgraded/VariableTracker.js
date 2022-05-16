@@ -27,6 +27,8 @@ const VariableTracker = ({ label, maxValue, trackerId, deleteTracker }) => {
                             (
                                 <input
                                     type="number"
+                                    min="0"
+                                    max="999"
                                     value={currentTotal}
                                     onMouseLeave={() => setClicked(!clicked)}
                                     onChange={(e) => setCurrentTotal(e.target.value)}>

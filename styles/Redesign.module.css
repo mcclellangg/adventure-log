@@ -13,9 +13,10 @@
 /* Utility */
 .header {
     color: off-white;
-    font-size: 3rem;
+    font-size: 48px;
+    font-weight: 900;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .primaryText {
@@ -36,7 +37,6 @@
 /* Layout Container */
 .layoutContainer {
     display: flex;
-    /* border: 1px solid hotpink; */
     justify-content: space-around;
 }
 
@@ -44,8 +44,8 @@
 .trackerContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* border: 1px solid red; */
+    justify-content: flex-start;
+    gap: 2%;
     width: 600px;
 }
 
@@ -53,7 +53,6 @@
 .notesContainer {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid light-brown; */
     border-radius: 2px;
     width: 600px;
     height: 700px;

@@ -38,8 +38,14 @@
 .valueWrapper {
     display: flex;
     justify-content: space-around;
-    font-size: 4rem;
-    margin: 0px 30px 20px 5px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0px 30px 0px 5px;
+}
+
+.valueWrapper div:nth-child(2) {
+    text-align: center;
+    width: 90px;
 }
 
 .valueWrapper input {
@@ -47,29 +53,33 @@
     padding: 0;
     border: none;
     border-radius: 2px;
-    color: #E5F3FF;
+    color: off-white;
     text-align: center;
     background-color: rgba(20, 20, 20, 0.2);
-    font-size: 3.8rem;
-    width: 110px;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 90px;
 }
 
 .variableAdj {
     margin: 0;
+    padding: 0;
+    border-left: solid 1px off-white;
+    border-radius: 0px;
     color: primary-brown;
     text-align: center;
     max-width: 20%;
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: 700;
     background-color: rgba(20, 20, 20, 0.2);
 }
 
 .variableTracker button {
-    background-color: main-bg-color;
+    background-color: rgba(20, 20, 20, 0.2);
     color: off-white;
-    font-size: 2rem;
-    height: 70px;
-    width: 70px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    width: 60px;
     border-radius: 0;
     border: 1px solid off-white;
 }
@@ -77,6 +87,8 @@
 /* Hidden and pseudo classes */
 .variableTracker button.close {
     align-self: center;
+    font-size: 1.8rem;
+    font-weight: 600;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -94,5 +106,13 @@
 }
 
 .variableTracker:hover {
+    border-color: lightest-brown;
+}
+
+.variableTracker:hover > * > * {
+    border-color: lightest-brown;
+}
+
+.variableTracker:hover > * {
     border-color: lightest-brown;
 }
