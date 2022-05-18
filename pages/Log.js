@@ -7,6 +7,7 @@ import styles from "../styles/Redesign.module.css"
 import TrackerForm from "../components/upgraded/TrackerForm";
 import VariableTracker from "../components/upgraded/VariableTracker";
 import SingleTracker from "../components/upgraded/SingleTracker";
+import ManageTrackers from "../components/ManageTrackers";
 
 const Log = () => {
     const [trackers, setTrackers] = useState(testData);
@@ -45,6 +46,7 @@ const Log = () => {
                             deleteTracker={deleteTracker}>
                         </SingleTracker>
                     )}
+                    <ManageTrackers trackers={trackers} setTrackers={setTrackers}></ManageTrackers>
                 </div>
 
                 <div className={styles.notesContainer}>

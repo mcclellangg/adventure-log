@@ -1,4 +1,6 @@
 // Button for saving trackers locally
+import { FaUpload, FaDownload } from "react-icons/fa";
+
 import styles from "../styles/ManageTrackers.module.css";
 
 const ManageTrackers = ({ trackers, setTrackers }) => {
@@ -51,14 +53,16 @@ const ManageTrackers = ({ trackers, setTrackers }) => {
 
     return (
         <>
-            <div className={styles.gridContainer}>
+            <div className={styles.btnContainer}>
                 <button title="Download current trackers to json file"
-                    className={styles.buttons} onClick={downloadTrackers}>Download Trackers
+                    onClick={downloadTrackers}>
+                    <FaDownload /> <p>Download</p>
                 </button>
                 <input type="file" accept=".json" id="fileElem" className="visually-hidden" onChange={getFileItem}></input>
                 <label htmlFor="fileElem">
                     <button title="Upload trackers from json file"
-                        className={styles.buttons} onClick={() => document.getElementById('fileElem').click()}>Upload Trackers
+                        onClick={() => document.getElementById('fileElem').click()}>
+                        <FaUpload /> <p>Upload</p>
                     </button>
                 </label>
             </div>

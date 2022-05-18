@@ -1,8 +1,32 @@
-.gridContainer {
+/* Import Colors */
+@value colors: "./colors.css";
+
+@value main-bg-color from colors;
+@value off-white from colors;
+@value light-grey from colors;
+@value dark-grey from colors;
+@value primary-brown from colors;
+@value light-brown from colors;
+@value lightest-brown from colors;
+
+.btnContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
-.buttons {
-    padding: 8px 6px;
+.btnContainer button {
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: off-white;
+    background-color: dark-grey;
+    border: 1px solid off-white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btnContainer button:hover {
+    border-color: lightest-brown;
 }
