@@ -70,3 +70,14 @@
     background-color: dark-grey;
     color: off-white;
 }
+
+.notesContainer button {
+    align-self: center;
+    width: 120px;
+    color: off-white;
+    background-color: dark-grey;
+    border: 1px solid off-white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+}

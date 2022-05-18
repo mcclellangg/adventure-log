@@ -1,5 +1,6 @@
 // Updated Redesign of Log
 import { useState } from "react";
+import { FaSave } from "react-icons/fa";
 
 import testData from "../data/trackers";
 
@@ -11,6 +12,26 @@ import ManageTrackers from "../components/ManageTrackers";
 
 const Log = () => {
     const [trackers, setTrackers] = useState(testData);
+    const [notes, setNotes] = useState({ value: "" });
+
+    const updateNotes = (e) => {
+        setNotes({ value: e.target.value });
+    };
+
+    const downloadTxtArea = () => {
+        /*
+          Temporarily creates an anchor element, and attaches the text area
+          to notes state, to that element, creates a file for download
+        */
+        const element = document.createElement("a");
+        const file = new Blob([notes.value], { type: 'text/plain;charset=utf-8' });
+        element.href = URL.createObjectURL(file);
+        element.download = "adventureLogNotes.txt";
+        document.body.appendChild(element);
+        element.click();
+    }
+
+
 
     const deleteTracker = (e) => {
         e.preventDefault();
@@ -51,11 +72,18 @@ const Log = () => {
 
                 <div className={styles.notesContainer}>
                     <label>NOTES</label>
-                    <textarea rows={40} cols={60}></textarea>
+                    <textarea rows={40} cols={60}
+                        placeholder="Log your notes here Adventurer!"
+                        value={notes.value}
+                        onChange={updateNotes}>
+                    </textarea>
+                    <button onClick={downloadTxtArea}>
+                        <FaSave/> Save
+                    </button>
                 </div>
             </div>
         </>
     )
-}
+};
 
 export default Log;
