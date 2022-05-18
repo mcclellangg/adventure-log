@@ -1,7 +1,7 @@
 // Button for saving trackers locally
 import { FaUpload, FaDownload } from "react-icons/fa";
 
-import styles from "../styles/ManageTrackers.module.css";
+import styles from "./ManageTrackers.module.css";
 
 const ManageTrackers = ({ trackers, setTrackers }) => {
 

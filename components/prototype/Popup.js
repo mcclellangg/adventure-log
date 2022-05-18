@@ -1,4 +1,4 @@
-import styles from '../styles/Popup.module.css';
+import styles from './Popup.module.css';
 
 const Popup = (props) => {
     return (props.trigger) ? (

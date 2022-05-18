@@ -1,6 +1,6 @@
 // Detailed Stat Tracker component
 import { useState } from "react";
-import styles from "../styles/Trackers.module.css";
+import styles from "../../styles/Trackers.module.css";
 
 const DetailedTracker = ({ label, maxValue, trackerId, removeTracker }) => {
     const [currentTotal, setCurrentTotal] = useState(maxValue);

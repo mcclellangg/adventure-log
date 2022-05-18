@@ -1,10 +1,10 @@
-// Updated Redesign of Log
+// Log
 import { useState } from "react";
 import { FaSave } from "react-icons/fa";
 
 import testData from "../data/trackers";
 
-import styles from "../styles/Redesign.module.css"
+import styles from "../styles/Log.module.css"
 import TrackerForm from "../components/upgraded/TrackerForm";
 import VariableTracker from "../components/upgraded/VariableTracker";
 import SingleTracker from "../components/upgraded/SingleTracker";

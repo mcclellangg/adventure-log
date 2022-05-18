@@ -1,6 +1,6 @@
 // Trackers.js
-import DetailedTracker from "../components/DetailedTracker"
-import BriefTracker from "../components/BriefTracker";
+import DetailedTracker from "../components/prototype/DetailedTracker"
+import BriefTracker from "../components/prototype/BriefTracker";
 import ManageTrackers from "../components/ManageTrackers";
 import styles from "../styles/Trackers.module.css"
 import { useState } from "react";

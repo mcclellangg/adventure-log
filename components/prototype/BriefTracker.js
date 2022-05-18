@@ -1,6 +1,6 @@
 // Stat component based on prop value
 import { useState, useEffect } from "react";
-import styles from "../styles/Trackers.module.css";
+import styles from "../../styles/Trackers.module.css";
 
 const BriefTracker = ({ statTotal, statAbv, detail, reset, removeTracker, trackerId }) => {
     const [currentTotal, setCurrentTotal] = useState(statTotal);

@@ -1,4 +1,4 @@
-import styles from '../styles/CharacterForm.module.css';
+import styles from './CharacterForm.module.css';
 import { useState } from "react";
 
 const CharacterForm = ({ characterList, setCharacterList, setAddCharacter }) => {

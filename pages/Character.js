@@ -1,9 +1,9 @@
 // Log Page
 import { useState } from "react";
-import CharacterForm from "../components/CharacterForm";
-import BriefTracker from "../components/BriefTracker";
-import Popup from "../components/Popup";
-import styles from "../styles/Log.module.css";
+import CharacterForm from "../components/prototype/CharacterForm";
+import BriefTracker from "../components/prototype/BriefTracker";
+import Popup from "../components/prototype/Popup";
+import styles from "../styles/Character.module.css";
 
 const CHARACTERS = require('../data/characters.json')
 

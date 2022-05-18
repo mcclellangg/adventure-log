@@ -1,5 +1,5 @@
 /* Import Colors */
-@value colors: "./colors.css";
+@value colors: "../styles/colors.css";
 
 @value main-bg-color from colors;
 @value off-white from colors;
