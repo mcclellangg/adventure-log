@@ -26,7 +26,7 @@ people would enjoy using, and want to use. Unfortunately looking at my prototype
 
 :sparkles: Thankfully one of my friends gave me this great layout design! :sparkles:
 
-<img src="images\adventure-log-v2.PNG" alt="char-sheet" width="400"/>
+<img src="https://raw.githubusercontent.com/mcclellangg/adventure-log/dev/images/adventure-log-v2.png" alt="layout-design" width="400"/>
 
 With this in hand I completely redid the UX/UI (which was also a great chance to refactor my code in general) :smile:!
 
