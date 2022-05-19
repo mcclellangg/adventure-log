@@ -2,13 +2,18 @@
 import { useState } from "react";
 import styles from "./TrackerForm.module.css";
 
-const TrackerForm = ( {setTrackers, trackers }) => {
-    const [trackerForm, setTrackerForm] = useState({
+const TrackerForm = ({ setTrackers, trackers }) => {
+    const initialState = {
         label: "",
         maxValue: "",
         trackerType: "single",
-        id: ""
-    });
+        id: +new Date()  // Creates unique id
+    };
+    const [trackerForm, setTrackerForm] = useState({ ...initialState });
+
+    const clearForm = () => {
+        setTrackerForm({ ...initialState });
+    }
 
     const updateForm = (e) => {
         const target = e.target;
@@ -23,12 +28,9 @@ const TrackerForm = ( {setTrackers, trackers }) => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        trackerForm.id = trackers.length;
-        setTrackers([
-            ...trackers,
-            trackerForm
-        ]);
+        setTrackers([...trackers, trackerForm]);
         console.log(trackerForm);
+        clearForm();
     };
 
     return (
@@ -57,6 +59,7 @@ const TrackerForm = ( {setTrackers, trackers }) => {
                             id="variable"
                             name="trackerType"
                             value="variable"
+                            checked={trackerForm.trackerType === "variable"}
                             onChange={updateForm}>
                         </input>
                         <label htmlFor="variable">Variable</label>
@@ -66,7 +69,7 @@ const TrackerForm = ( {setTrackers, trackers }) => {
                             id="single"
                             name="trackerType"
                             value="single"
-                            defaultChecked
+                            checked={trackerForm.trackerType === "single"}
                             onChange={updateForm}>
                         </input>
                         <label htmlFor="single">Single</label>
