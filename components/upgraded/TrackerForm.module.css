@@ -25,6 +25,7 @@
     border: 1px solid light-brown;
     border-radius: 2px;
     max-height: 520px;
+    max-width: 25%;
 }
 
 .trackerForm > * {
@@ -41,15 +42,15 @@
     font-size: 18px;
     color: off-white;
     min-height: 50px;
-    width: 300px;
+    width: 100%;
     margin-bottom: 5%;
 }
 
 .trackerForm button {
     background-color: lightest-brown;
     color: off-white;
-    margin: 20px auto 20px;
-    padding: 16px 40px;
+    margin: 5% auto 5%;
+    padding: 8%;
     font-size: 22px;
     font-weight: 600;
     display: flex;
@@ -68,9 +69,10 @@
 
 .customInput label {
     background-color: dark-grey;
+    align-self: center;
     border: 1px solid off-white;
     border-radius: 4px;
-    padding: 16px 40px;
+    padding: 1rem;
     color: off-white;
     text-align: center;
     transition : all .4s 0s ease;
